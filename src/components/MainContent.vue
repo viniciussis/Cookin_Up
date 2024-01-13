@@ -1,23 +1,32 @@
 <script lang="ts">
+import IngredientSelector from './IngredientSelector.vue';
+
 export default {
-  data() {
-    return {
-      ingredients: ['Alho', 'Manteiga', 'Cebola']
-    }
-  }
+    data() {
+        return {
+            ingredients: []
+        };
+    },
+    components: { IngredientSelector }
 }
 </script>
 
 <template>
   <main class="main-content">
-    <span class="subtitle-lg my-list-text">
-
-    </span>
-    <ul class="my-list-ingredients">
-      <li v-for="ingredient in ingredients" class="ingredients">
-        {{ ingredient }}
-      </li>
-    </ul>
+    <section>
+      <span class="subtitle-lg my-list-text">
+      </span>
+      <ul v-if="ingredients.length" class="my-list-ingredients">
+        <li v-for="ingredient in ingredients" :key="ingredient" class="ingredients">
+          {{ ingredient }}
+        </li>
+      </ul>
+      <p v-else class="empty-list">
+        <img src="../assets/images/icones/lista-vazia.svg" alt="">
+        Sua lista está vazia, selecione ingredientes para iniciar.
+      </p>
+    </section>
+    <IngredientSelector />
   </main>
 </template>
 
