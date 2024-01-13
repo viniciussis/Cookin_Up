@@ -1,5 +1,5 @@
 export default interface ICategory {
   nome: string;
-  ingredients: string[];
+  ingredientes: string[];
   imagem: string;
 }

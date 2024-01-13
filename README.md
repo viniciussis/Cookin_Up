@@ -1,6 +1,6 @@
-# Cookin Up
+# Cookin' Up
 
-Bem-vindo ao Cookin Up! Sua lista de Ingredientes e receitas em Vue.js
+Bem-vindo ao Cookin' Up! Sua lista de Ingredientes e receitas em Vue.js
 
 ## Conteúdo
 
@@ -14,7 +14,7 @@ Bem-vindo ao Cookin Up! Sua lista de Ingredientes e receitas em Vue.js
 
 No Cookin' Up, você vai selecionando ingredientes para construir a sua lista de ingredientes. Em seguida, é possível buscar as receitas possíveis de serem feitas com os ingredientes da sua lista!
 
-Você também pode conferir a demonstração ao vivo do Cookin Up [aqui!](https://cookin-up-two.vercel.app)
+Você também pode conferir a demonstração ao vivo do Cookin' Up [aqui!](https://cookin-up-two.vercel.app)
 
 ## Tecnologias Utilizadas e Funcionalidades
 
