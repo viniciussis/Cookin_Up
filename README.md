@@ -1,40 +1,71 @@
-# cookin_up
+# Cookin Up
 
-This template should help get you started developing with Vue 3 in Vite.
+Bem-vindo ao Cookin Up! Sua lista de Ingredientes e receitas em Vue.js
 
-## Recommended IDE Setup
+## Conteúdo
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- [Visão Geral](#visão-geral)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Instalação e Pré-requisitos](#pré-requisitos)
+- [Como Entrar em Contato](#como-entrar-em-contato)
+- [Licença](#licença)
 
-## Type Support for `.vue` Imports in TS
+## Visão Geral
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+No Cookin' Up, você vai selecionando ingredientes para construir a sua lista de ingredientes. Em seguida, é possível buscar as receitas possíveis de serem feitas com os ingredientes da sua lista!
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+Você também pode conferir a demonstração ao vivo do Cookin Up [aqui!](https://my-clock-five.vercel.app/)
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+## Tecnologias Utilizadas e Funcionalidades
 
-## Customize configuration
+- **Vue:** Biblioteca JavaScript para construção de interfaces de usuário reativas e componentizadas.
+- **TypeScript:** Extensão do JavaScript que adiciona tipagem estática ao código, melhorando a robustez e a manutenibilidade.
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Pré-requisitos & Setup
 
-## Project Setup
+Certifique-se de que você possui os seguintes requisitos antes de começar a usar o projeto:
 
-```sh
-npm install
-```
+Node.js - Certifique-se de ter o Node.js instalado.
+Vue CLI - É necessário ter o Vue CLI instalado globalmente para facilitar o desenvolvimento.
 
-### Compile and Hot-Reload for Development
+Setup Recomendado: [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-```sh
-npm run dev
-```
+Desabilite a extensão Vetur, caso a tenha instalada no seu VSCode.
 
-### Type-Check, Compile and Minify for Production
+## Suporte para arquivos `.vue` no TypeScript
 
-```sh
-npm run build
-```
+Nos editores de código, precisamos do [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) para que o serviço da linguagem TypeScript reconheça arquivos com a extensão `.vue`.
+
+Se o serviço TypeScript nativo do VSCode não estiver rápido o suficiente para você, o Volar implementou um modo *Takeover* que é mais eficiente. Para ativá-lo, siga os passos da seção [Volar Takeover Mode](https://vuejs.org/guide/typescript/overview.html#volar-takeover-mode) da documentação.
+
+## Instalação
+
+1. Clone o repositório: `git clone https://github.com/viniciussis/Cookin_Up.git`
+2. Entre no diretório do projeto: `cd Cookin_Up`
+3. Instale as dependências: `npm install`
+
+## Como Usar
+
+1. Inicie o aplicativo: `npm run dev`
+2. Abra o navegador e acesse `http://localhost:5173/`
+
+## Contribuindo
+
+Sinta-se à vontade para contribuir ou abrir issues para sugestões e correções de bugs. Pull requests são bem-vindos!
+
+## Como Entrar em Contato
+
+Estou sempre aberto para conversar e colaborar em projetos interessantes. Você pode entrar em contato comigo pelos seguintes meios:
+
+- Email: vinicius01012@gmail.com
+- LinkedIn: [https://www.linkedin.com/in/viniciussis](URL)
+- GitHub: [https://github.com/viniciussis](URL)
+
+Fique à vontade para me contatar se tiver alguma pergunta, ideia ou oportunidade de colaboração!
+
+## Licença
+
+Este projeto está licenciado sob a [Licença MIT](LICENSE).
+
+---
+**Desenvolvido por Vinícius Silva Santos**
