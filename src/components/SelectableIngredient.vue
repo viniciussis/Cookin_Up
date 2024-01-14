@@ -10,18 +10,29 @@ export default {
     return {
       selected: false
     }
-  }
+  },
+  methods: {
+    onClick() {
+      this.selected = !this.selected
+      if (this.selected) {
+        this.$emit('addIngredient', this.ingredient)
+      } else {
+        this.$emit('removeIngredient', this.ingredient)
+      }
+    }
+  },
+  emits: ['addIngredient', 'removeIngredient']
 }
 </script>
 
 <template>
-  <button @click="selected = !selected" class="selectable">
+  <button @click="onClick" class="selectable">
     <Tag :text="ingredient" :active="selected" />
   </button>
 </template>
 
 <style scoped>
-.selectable{
+.selectable {
   cursor: pointer;
 }
 </style>

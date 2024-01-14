@@ -2,6 +2,7 @@
 import { getCategories } from '@/http/index';
 import type ICategory from '@/interfaces/ICategory';
 import CardCategory from './CardCategory.vue';
+import MainButton from './MainButton.vue';
 
 export default {
   data() {
@@ -12,7 +13,8 @@ export default {
   async created() {
     this.categories = await getCategories();
   },
-  components: { CardCategory }
+  components: { CardCategory, MainButton },
+  emits: ['addIngredient', 'removeIngredient']
 }
 </script>
 
@@ -24,10 +26,12 @@ export default {
     </p>
     <ul class="categories">
       <li v-for="category in categories" :key="category.nome">
-        <CardCategory :category="category" />
+        <CardCategory :category="category" @add-ingredient="$emit('addIngredient', $event)"
+          @remove-ingredient="$emit('removeIngredient', $event)" />
       </li>
       <p class="para tip">*Atenção: consideramos que você tem em casa sal, pimenta e água.</p>
     </ul>
+    <MainButton text="Buscar receitas!"/>
   </section>
 </template>
 

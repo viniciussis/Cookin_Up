@@ -5,17 +5,26 @@ import YourList from './YourList.vue';
 export default {
   data() {
     return {
-      ingredients: []
+      ingredients: [] as string[]
     };
   },
-  components: { IngredientSelector, YourList }
+  components: { IngredientSelector, YourList },
+  methods: {
+    addIngredient(ingredient: string) {
+      this.ingredients.push(ingredient)
+    },
+    removeIngredient(ingredient: string) {
+      this.ingredients = this.ingredients.filter(existingIngredient => existingIngredient !== ingredient)
+    }
+  }
 }
 </script>
 
 <template>
   <main class="main-content">
     <YourList :ingredients="ingredients"/>
-    <IngredientSelector />
+    <IngredientSelector @add-ingredient="addIngredient" @remove-ingredient="removeIngredient"/>
+    
   </main>
 </template>
 
