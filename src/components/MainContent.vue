@@ -29,20 +29,20 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5rem;
+  gap: 4rem;
 }
 
 @media only screen and (max-width: 1300px) {
   .main-content {
     padding: 5rem 3.75rem;
-    gap: 3.5rem;
+    gap: 2.5rem;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .main-content {
     padding: 4rem 1.5rem;
-    gap: 4rem;
+    gap: 3rem;
   }
 }
 </style>

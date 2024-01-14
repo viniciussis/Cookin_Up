@@ -20,7 +20,7 @@ export default {
     </li>
   </ul>
   <p v-else class="empty-list">
-    <img src="../assets/images/lista-vazia.svg" alt="">
+    <img src="../assets/images/lista-vazia.svg" alt="icone de lista vazia">
     Sua lista está vazia, selecione ingredientes para iniciar.
   </p>
 </template>
@@ -30,7 +30,7 @@ export default {
   color: var(--coral, #F0633C);
   display: block;
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .my-list-ingredients {
