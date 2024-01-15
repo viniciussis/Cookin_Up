@@ -12,7 +12,7 @@ export default {
 
 <template>
   <span class="subtitle-lg my-list-text">
-    Sua Lista:
+    Sua lista:
   </span>
   <ul v-if="ingredients.length" class="my-list-ingredients">
     <li v-for="ingredient in ingredients" :key="ingredient">
@@ -30,7 +30,7 @@ export default {
   color: var(--coral, #F0633C);
   display: block;
   text-align: center;
-  margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .my-list-ingredients {

@@ -5,6 +5,7 @@ import CardCategory from './CardCategory.vue';
 import MainButton from './MainButton.vue';
 
 export default {
+  name: 'IngredientSelector',
   data() {
     return {
       categories: [] as ICategory[]
@@ -14,24 +15,24 @@ export default {
     this.categories = await getCategories();
   },
   components: { CardCategory, MainButton },
-  emits: ['addIngredient', 'removeIngredient']
+  emits: ['addIngredient', 'removeIngredient', 'searchRecipes']
 }
 </script>
 
 <template>
   <section class="ingredients-selector">
     <h1 class="header ingredients-title">Ingredientes</h1>
-    <p class="para-lg intructions">
+    <p class="para-lg instructions">
       Selecione abaixo os ingredientes que você quer usar nesta receita:
     </p>
-    <ul class="categories">
+    <ul v-if="categories.length" class="categories">
       <li v-for="category in categories" :key="category.nome">
         <CardCategory :category="category" @add-ingredient="$emit('addIngredient', $event)"
           @remove-ingredient="$emit('removeIngredient', $event)" />
       </li>
       <p class="para tip">*Atenção: consideramos que você tem em casa sal, pimenta e água.</p>
     </ul>
-    <MainButton text="Buscar receitas!"/>
+    <MainButton text="Buscar receitas!" @click="$emit('searchRecipes')" />
   </section>
 </template>
 
@@ -43,9 +44,9 @@ export default {
 }
 
 .ingredients-title {
-  color: var(--verde-medio, #3D6D4A);
+  color: var(--verde-medio);
   display: block;
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
 }
 
 .instructions {
@@ -53,7 +54,6 @@ export default {
 }
 
 .categories {
-  margin-bottom: 1rem;
   display: flex;
   justify-content: center;
   gap: 1.5rem;
@@ -62,12 +62,12 @@ export default {
 
 .tip {
   align-self: flex-start;
-  margin-bottom: 3.5rem;
+  margin-bottom: 2.5rem;
 }
 
 @media only screen and (max-width: 767px) {
   .tip {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
   }
 }
 </style>

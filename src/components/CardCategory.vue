@@ -16,7 +16,8 @@ export default {
 <template>
   <article class="category">
     <header class="category-header">
-      <img :src="`/images/icons/ingredients-categories/${category.imagem}`" alt="" class="category-img">
+      <img :src="`/images/icons/ingredients-categories/${category.imagem}`" alt="imagem do ingrediente"
+        class="category-img">
       <h2 class="para-lg category-name">{{ category.nome }}</h2>
     </header>
     <ul class="category-ingredients">
